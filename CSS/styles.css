@@ -1,0 +1,225 @@
+body {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+/* --- slider section --- */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(212, 239, 255);
+  box-sizing: border-box;
+  padding: 10px;
+}
+.slide-track {
+  display: flex;
+  width: calc(100% + 300px * 2); /* Number of slides times 2 plus the gap */
+  animation: scroll 10s linear infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+.slide {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+/* --- header section --- */
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 3rem;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: white;
+  box-shadow: 0px 15px 11px -14px rgba(0, 0, 0, 0.1);
+}
+.logo-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 17%;
+}
+.logo-img {
+  width: 3.438rem;
+}
+.logo-heading {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #fe3d35;
+}
+.logo-main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: larger;
+}
+.logo-button {
+  background: linear-gradient(to right, #ff3833 0%, #ff894a 100%);
+  color: #fff;
+  border: none;
+  font-size: initial;
+  width: 100%;
+  height: 100%;
+}
+.logo-button-outer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+}
+
+/* --- main section --- */
+
+/* --- first section --- */
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.first-heading {
+  margin-top: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  font-size: 2rem;
+  flex-direction: column;
+}
+.main-images {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: 37.063rem;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+.main-image {
+  max-height: 18.563rem;
+  display: block;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  opacity: 0;
+  transform: scale(0);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  padding: 1rem;
+}
+.normal-text {
+  margin-top: 10%;
+  text-align: center;
+  line-height: 1.5;
+}
+.links {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 20%;
+}
+.image-container:hover .overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- second section --- */
+.second {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2.5rem;
+}
+.first-heading-text {
+  font-size: large;
+}
+.main-images-second {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  margin-bottom: 6rem;
+  gap: 1rem;
+}
+.main-image-second {
+  display: block;
+  max-height: 28.563rem;
+}
+.image-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.overlay-1 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+  padding: 1rem;
+}
+.image-container:hover .overlay-1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+.overlay-heading {
+  font-weight: 750;
+  font-size: larger;
+}
+/* --- footer section --- */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 3.5rem;
+}
+.footer-text {
+  padding-right: 5.5rem;
+}
+.footer-logo {
+  max-width: 60px;
+  max-height: 60px;
+}
+.footer-sec {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
